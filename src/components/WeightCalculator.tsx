@@ -136,7 +136,13 @@ const WeightCalculator = ({
         Personalized Weight Calculator
       </Typography>
 
-      <Paper sx={{ p: 3, mb: 4 }}>
+      <Paper
+        sx={{
+          p: 3,
+          mb: 4,
+          borderRadius: 5,
+        }}
+      >
         <Grid container spacing={3}>
           {/* User Parameters Section */}
           <Grid item xs={12} md={6}>

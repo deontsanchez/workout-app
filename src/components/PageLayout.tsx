@@ -24,7 +24,7 @@ const PageLayout = ({
         component="main"
         sx={{
           flexGrow: 1,
-          py: { xs: 1, md: 2 },
+          py: { xs: 2, md: 3 },
           px: fullWidth ? 0 : { xs: 1, md: 2 },
           overflow: 'auto',
         }}
@@ -35,7 +35,7 @@ const PageLayout = ({
               elevation={2}
               sx={{
                 p: { xs: 2, md: 3 },
-                borderRadius: 2,
+                borderRadius: 5,
                 height: '100%',
               }}
             >
@@ -44,25 +44,6 @@ const PageLayout = ({
           ) : (
             children
           )}
-        </Container>
-      </Box>
-
-      <Box
-        component="footer"
-        sx={{
-          py: { xs: 2, md: 3 },
-          px: 2,
-          backgroundColor: theme =>
-            theme.palette.mode === 'light'
-              ? theme.palette.grey[200]
-              : theme.palette.grey[800],
-        }}
-      >
-        <Container maxWidth="lg">
-          <Box sx={{ textAlign: 'center' }}>
-            © {new Date().getFullYear()} FitTrack Pro - Your Personalized
-            Workout Assistant
-          </Box>
         </Container>
       </Box>
     </Box>
