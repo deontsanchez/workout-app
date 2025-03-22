@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Box, Typography, Tabs, Tab, Container } from '@mui/material';
+import { Box, Tabs, Tab, Container } from '@mui/material';
 import WeightCalculator from '@/components/WeightCalculator';
 import ExerciseDatabase from '@/components/ExerciseDatabase';
 import WorkoutGenerator from '@/components/WorkoutGenerator';
@@ -29,15 +29,6 @@ export default function Home() {
 
   return (
     <PageLayout withPaper={false}>
-      <Box sx={{ mb: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          FitTrack Pro
-        </Typography>
-        <Typography variant="body1" color="text.secondary">
-          Your intelligent workout companion
-        </Typography>
-      </Box>
-
       <Box sx={{ borderBottom: 1, borderColor: 'divider', mb: 3 }}>
         <Tabs
           value={activeTab}

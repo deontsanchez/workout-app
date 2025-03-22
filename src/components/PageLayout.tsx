@@ -17,16 +17,16 @@ const PageLayout = ({
   fullWidth = false,
 }: PageLayoutProps) => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <Navigation />
 
       <Box
         component="main"
         sx={{
           flexGrow: 1,
-          py: 4,
-          px: fullWidth ? 0 : 2,
-          mt: 2,
+          py: { xs: 1, md: 2 },
+          px: fullWidth ? 0 : { xs: 1, md: 2 },
+          overflow: 'auto',
         }}
       >
         <Container maxWidth={maxWidth} disableGutters={fullWidth}>
@@ -34,7 +34,7 @@ const PageLayout = ({
             <Paper
               elevation={2}
               sx={{
-                p: 3,
+                p: { xs: 2, md: 3 },
                 borderRadius: 2,
                 height: '100%',
               }}
@@ -50,9 +50,8 @@ const PageLayout = ({
       <Box
         component="footer"
         sx={{
-          py: 3,
+          py: { xs: 2, md: 3 },
           px: 2,
-          mt: 'auto',
           backgroundColor: theme =>
             theme.palette.mode === 'light'
               ? theme.palette.grey[200]

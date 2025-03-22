@@ -5,14 +5,9 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  Button,
   IconButton,
   Drawer,
   List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  ListItemButton,
   Box,
   useMediaQuery,
   useTheme,
@@ -21,15 +16,9 @@ import {
 } from '@mui/material';
 import {
   Menu as MenuIcon,
-  Dashboard as DashboardIcon,
-  FitnessCenter as FitnessCenterIcon,
-  Assessment as AssessmentIcon,
-  Person as PersonIcon,
-  Settings as SettingsIcon,
   LightMode as LightModeIcon,
   DarkMode as DarkModeIcon,
 } from '@mui/icons-material';
-import Link from 'next/link';
 import { useColorMode } from '@/app/theme';
 
 const Navigation = () => {
@@ -37,15 +26,6 @@ const Navigation = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const { mode, toggleColorMode } = useColorMode();
-
-  const navItems = [
-    { text: 'Dashboard', href: '/', icon: <DashboardIcon /> },
-    { text: 'Workouts', href: '/workouts', icon: <FitnessCenterIcon /> },
-    { text: 'Progress', href: '/progress', icon: <AssessmentIcon /> },
-    { text: 'Exercises', href: '/exercises', icon: <FitnessCenterIcon /> },
-    { text: 'Profile', href: '/profile', icon: <PersonIcon /> },
-    { text: 'Settings', href: '/settings', icon: <SettingsIcon /> },
-  ];
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
@@ -67,27 +47,7 @@ const Navigation = () => {
           FitTrack Pro
         </Typography>
       </Box>
-      <List>
-        {navItems.map(item => (
-          <ListItem key={item.text} disablePadding>
-            <ListItemButton
-              component={Link}
-              href={item.href}
-              sx={{
-                '&:hover': {
-                  backgroundColor:
-                    theme.palette.mode === 'dark'
-                      ? 'rgba(255, 255, 255, 0.08)'
-                      : 'rgba(0, 0, 0, 0.04)',
-                },
-              }}
-            >
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+      <List></List>
       <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
         <FormControlLabel
           control={
@@ -127,20 +87,6 @@ const Navigation = () => {
           >
             FitTrack Pro
           </Typography>
-
-          {!isMobile &&
-            navItems.map(item => (
-              <Button
-                color="inherit"
-                key={item.text}
-                component={Link}
-                href={item.href}
-                sx={{ ml: 1 }}
-                startIcon={item.icon}
-              >
-                {item.text}
-              </Button>
-            ))}
 
           {!isMobile && (
             <IconButton color="inherit" onClick={toggleColorMode}>
