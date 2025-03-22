@@ -1,24 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FitTrack Pro
+
+FitTrack Pro is a personalized workout application built to help users achieve their fitness goals. The app provides intelligent workout generation, weight calculations, and exercise recommendations based on user profiles and fitness objectives.
+
+## Features
+
+- **Personalized Weight Calculator**: Calculate recommended weights for exercises based on your body metrics, experience level, and fitness goals
+- **Exercise Database**: Browse a comprehensive database of exercises with detailed instructions, muscle targeting information, and alternatives
+- **Workout Generator**: Create customized workout plans based on your goals, available equipment, and time constraints
+- **Adaptive Periodization**: Intelligently cycles workout types to optimize progress and prevent plateaus
+- **Dark/Light Theme Support**: Comfortable viewing experience in any lighting condition
+
+## Technologies
+
+- **Next.js 14**: React framework for building the web application
+- **Material UI**: Component library for responsive and modern UI
+- **TypeScript**: Type-safe JavaScript for better developer experience and fewer bugs
+- **React Hooks**: State management and side effects
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app`: Next.js app router components and layouts
+- `src/components`: Reusable UI components
+- `src/database`: Exercise database and other data
+- `src/types`: TypeScript type definitions
+- `src/utils`: Utility functions for calculations and workout generation
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Learn More
 
